@@ -12,13 +12,12 @@ function App() {
 
   return (
     <View style={styles.container}>
+      <Text>Calculadora</Text>
       <Text>Digite o 1º Numero</Text>
       <TextInput value={num1} onChangeText={setNum1} style={styles.input} />
       <Text>Digite o 2º Numero</Text>
       <TextInput value={num2} onChangeText={setNum2} style={styles.input} />
       <Button title="Somar" onPress={somar} />
-
-      {/* Additional space at the bottom, adjust as needed */}
       <View style={{ height: 20 }} />
     </View>
   );
