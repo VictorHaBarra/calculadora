@@ -1,25 +1,44 @@
-import React, { useState } from "react";
-import { Text, TextInput, Button, View} from "react-native-web";
-
+import React, { useState } from 'react';
+import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 
 function App() {
-  const [num1, setNum1] = useState("Exemplo = 0");
-  const [num2, setNum2] = useState("Exemplo = 0");
+  const [num1, setNum1] = useState(" ");
+  const [num2, setNum2] = useState(" ");
 
   function somar() {
-     let soma = parseInt(num1) + parseInt(num2);
-     console.log("Soma: ", soma)
+    let soma = parseInt(num1) + parseInt(num2);
+    console.log("Soma: ", soma);
   }
-  return(
-    <View>
+
+  return (
+    <View style={styles.container}>
       <Text>Digite o 1º Numero</Text>
-      <TextInput value={num1} onChangeText={setNum1}/>
+      <TextInput value={num1} onChangeText={setNum1} style={styles.input} />
       <Text>Digite o 2º Numero</Text>
-      <TextInput value={num2} onChangeText={setNum2}/>
-      <Button title="Somar" onPress={somar}/>
+      <TextInput value={num2} onChangeText={setNum2} style={styles.input} />
+      <Button title="Somar" onPress={somar} />
+
+      {/* Additional space at the bottom, adjust as needed */}
+      <View style={{ height: 20 }} />
     </View>
-  )
+  );
 }
 
-export default App;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 16,
+  },
+  input: {
+    height: 40,
+    borderColor: 'gray',
+    borderWidth: 1,
+    marginBottom: 10,
+    paddingLeft: 8,
+    width: '100%',
+  },
+});
 
+export default App;
