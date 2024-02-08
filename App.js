@@ -32,11 +32,12 @@ const styles = StyleSheet.create({
   },
   input: {
     height: 40,
-    borderColor: 'gray',
+    borderColor: 'black',
     borderWidth: 1,
     marginBottom: 10,
     paddingLeft: 8,
     width: '100%',
+    backgroundColor: 'yellow'
   },
 });
 
